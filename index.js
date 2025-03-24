@@ -4,10 +4,10 @@ const heroText = document.getElementById("hero-text");
 
 if (heroBg && heroText) {
     const slides = [
-        { image: "Showcase1.png", text: "Machines learn, but humans create." },
-        { image: "Showcase2.png", text: "Reboot and try again." },
-        { image: "Showcase3.png", text: "Data is the new oil." },
-        { image: "Showcase4.png", text: "Keep calm and code on." }
+        { image: "./assets/Showcase1.png", text: "Machines learn, but humans create." },
+        { image: "./assets/Showcase2.png", text: "Reboot and try again." },
+        { image: "./assets/Showcase3.png", text: "Data is the new oil." },
+        { image: "./assets/Showcase4.png", text: "Keep calm and code on." }
     ];
     
     let imagesLoaded = 0;
