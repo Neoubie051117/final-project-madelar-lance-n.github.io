@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 41 By Lance N. Madelar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Calibri, sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background: #000;
+        }
+
+        .titleHeader {
+            font-size: 50px;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            background: #1A2D42;
+        }
+
+        .containerHolder {
+            width: 100%;
+            text-align: center;
+            padding-top: 20px; 
+        }
+        
+        .contentHeader {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 60px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .webHolder {
+            margin: 50px auto;
+            width: 500px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            padding-bottom: 20px;
+        }
+
+        .webHeader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: tomato;
+            padding: 15px;
+        }
+
+        .webTitle {
+            font-size: 32px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .webContent {
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .preview-box {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f4f4f4;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .preview-box img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .button-group input {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button-group input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .button-group input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .button-group input[type="button"] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .button-group input:hover {
+            opacity: 0.8;
+        }
+
+        #fileupload {
+            display: none;
+        }
+        
+        .file-upload-label {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease, transform 0.2s;
+            background-image: linear-gradient(to right, #007bff, #0056b3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .file-upload-label:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        
+        .select-text {
+            color: white;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        
+        input[type="image"] {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        
+        input[type="image"]:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="titleHeader">Activity 41</div>
+
+    <div class="containerHolder">
+        <p class="contentHeader">File Upload Form(s)</p>
+
+        <div class="webHolder">
+            <div class="webHeader">
+                <p class="webTitle">Upload Your File</p> 
+            </div>
+
+            <div class="webContent">
+                <form action="#" method="#" enctype="multipart/form-data">
+                    <div class="preview-box" id="preview-box">
+                        <p>Image Preview</p>
+                    </div>
+                    <label for="fileupload">Select a file to upload:</label>
+                    <input type="file" id="fileupload" name="fileupload" accept="image/*" required onchange="previewImage(event)" />
+
+                    <div class="button-group">
+                        <input type="submit" name="submit" value="Submit" />
+                        <input type="reset" name="reset" value="Reset" onclick="clearPreview()" />
+                        <input type="image" name="imagebutton" src="imageSource/SubmitImage.jpg" alt="Submit Image"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const previewBox = document.getElementById("preview-box");
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    previewBox.innerHTML = `<img src="${reader.result}" alt="Image Preview">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function clearPreview() {
+            document.getElementById("preview-box").innerHTML = "<p>Image Preview</p>";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+:root { 
+  --bg-dark: #0d1b2a;
+  --bg-darkest: #1b263b;
+  --text-primary: #ffffff;
+  --accent-primary: #4CAF50;
+  --border-dark: #415a77;
+  --box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  --button-radius: 20px;
+  --transition-default: 0.3s ease-in-out;
+  --container-bg: #000;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.activity-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.containerHolder {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columns */
+  gap: 15px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+}
+
+.activity-link {
+  background-color: var(--bg-darkest);
+  color: var(--text-primary);
+  padding: 15px 20px;
+  border-radius: var(--button-radius) var(--button-radius) 0 20px; 
+  text-align: center;
+  font-size: 1.1rem;
+  transition: var(--transition-default);
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.activity-link:hover {
+  background-color: var(--accent-primary);
+  color: var(--bg-dark);
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .containerHolder {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .containerHolder {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .containerHolder {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .activity-link {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

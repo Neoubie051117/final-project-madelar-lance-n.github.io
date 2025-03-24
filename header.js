@@ -123,10 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Define margin rules for specific pages
             const marginRules = {
-                "trends.html": "80px",
-                "events.html": "80px",
-                "community.html": "80px",
-                "support.html": "30px",
+                "container-activities.html": "0px",
                 // Add more pages and their margins here if needed
             };
 
