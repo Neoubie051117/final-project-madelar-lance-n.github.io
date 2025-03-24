@@ -3,7 +3,7 @@
   --bg-darkest: #1b263b;
   --text-primary: #ffffff;
   --accent-primary: #4CAF50;
-  --border-dark: #415a77;
+  --border-dark: #000000;
   --box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   --button-radius: 20px;
   --transition-default: 0.3s ease-in-out;
@@ -43,7 +43,7 @@ body {
   background-color: var(--bg-darkest);
   color: var(--text-primary);
   padding: 15px 20px;
-  border-radius: var(--button-radius) var(--button-radius) 0 20px; 
+  border-radius: 5px;
   text-align: center;
   font-size: 1.1rem;
   transition: var(--transition-default);
@@ -57,9 +57,8 @@ body {
 }
 
 .activity-link:hover {
-  background-color: var(--accent-primary);
-  color: var(--bg-dark);
-  border-radius: 2px;
+  border-radius: 0 20px 0 20px;
+  box-shadow: 0px 0px 10px var(--accent-primary);
 }
 
 /* Responsive */

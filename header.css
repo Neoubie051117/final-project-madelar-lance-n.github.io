@@ -13,8 +13,10 @@
   --bg-darkest: #282828; /* Darkest Background */
   --text-primary: #FFFFFF; /* Text Color */
   --accent-primary: #E55B45; /* Softer Tomato for Emphasis */
-  --accent-hover: #C14D3B; /* Muted Dark Tomato for Hover */
+  --accent-hover: #FF6C4F; /* Muted Dark Tomato for Hover */
   --border-dark: #323232; /* Softer Border */
+  --glow-white: 0 0 15px rgba(255, 255, 255, 1);
+  --glow-red: 0 0 15px rgba(229, 91, 69, 1);
 
   /* Typography */
   --font-family: Arial, sans-serif;
