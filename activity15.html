@@ -4,70 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 15 By Lance N. Madelar</title>
+
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="activity.css">    <!---Activity's CSS-->
+    <script src="activity.js" defer></script>     <!-- Activity's Scipts --> 
 </head>
 
-<style type="text/css">
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Calibri;
-        text-decoration: none;
-    }
-
-    body{
-        background: #000;
-    }
-
-    .titleHeader{
-        font-size: 50px;
-        padding: 5px 0 5px;
-        color: #fff;
-        text-align: center;
-        background: #1A2D42;
-    }
-
-    .containerHolder{
-        display: inline-block;
-        width: 100%;
-        height: 90vh;
-    }
-
-    .contentHeader{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 60px;
-        color: #fff;
-        text-align: center;
-    }
-     
-    .headerSample{
-        font-family: 'Courier New', Courier, monospace;
-        color: #fff;
-        text-align: center;
-        margin: 40px 0 40px
-    }
-
-    .textContent{
-        font-size: 30px;
-        color: #fff;
-        text-align: center;
-        margin: 25px 0px 0px;
-    }
-</style>
-
 <body>
-    <div class="titleHeader">Activity 15</div>
-
     <div class="containerHolder"><br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 15</h1>
+            <button class="navButton">&gt;</button>
+        </div>
         <p class="contentHeader">Phrase Tag(s)</p><br>
-
-        <p class="textContent">This statement has been <mark>marked.</mark></p>
+        <p class="textContent">This statement has been <mark style="background: tomato; color: white;">marked.</mark></p>
 	    <p class="textContent">This statement is <em>emphasized.</em></p>
 	    <p class="textContent"><bdo dir = "rtl">This statement will go right to left or reversed (Dracula)</bdo></p>
 	    <p class="textContent">This statement is, <q>In Quotation</q>.</p>
 	    <p class="textContent">This is just normal text<code>...</code></p>
-
     </div>
-
 </body>
 </html>

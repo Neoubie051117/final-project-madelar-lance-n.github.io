@@ -120,7 +120,7 @@ body {
   margin: 0 0 50px;
 }
 
-/*Activity 5 - 9 are modified inline*/
+/*Activity 5 - 8 are modified inline*/
 
 /*Activity 9*/
 .activity9Href{
@@ -132,6 +132,17 @@ body {
 .activity9Href:hover{
   color: #E55B45;
   text-decoration: underline;
+}
+
+/*Activity 10*/
+.activity10span{
+  margin: 0 0 20px;
+}
+
+/*Activity 11*/
+.activity11fontsp{
+  font-size: 24px;
+  margin: 0 0 30px;
 }
 
 .navContainer {

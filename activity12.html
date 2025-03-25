@@ -4,49 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 12 By Lance N. Madelar</title>
+
+
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="activity.css">    <!---Activity's CSS-->
+    <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
-
-<style type="text/css">
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Calibri;
-        text-decoration: none;
+    
+<style>
+    .title{
+        color: #ffffff;
     }
 
-    .titleHeader{
-        font-size: 50px;
-        padding: 5px 0 5px;
-        color: #fff;
-        text-align: center;
-        background: #1A2D42;
+    body{
+        color: black; 
+        background: orange;
     }
 
-    .containerHolder{
-        display: inline-block;
-        width: 100%;
-        height: 90vh;
+    .navContainer{
+        background-color: var(--bg-dark); width:100%; border-radius: 10px;
     }
 
     .contentHeader{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 60px;
-        color: #000;
-        text-align: center;
-    }
-     
-    .textContent{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 30px;
-        text-align: center;
+        color: #000000;
     }
 </style>
 
-<body text="black" bgcolor="orange">
-    <div class="titleHeader">Activity 12</div>
-
+<body>
     <div class="containerHolder"><br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 12</h1>
+            <button class="navButton">&gt;</button>
+        </div>
         <p class="contentHeader">Color Name</p><br>
         <p class="textContent">This background has a name color of: Orange</p>
         <p class="textContent">The text  has a name color of: Black</p>
