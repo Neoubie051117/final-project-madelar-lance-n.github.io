@@ -4,86 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 9 By Lance N. Madelar</title>
+
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="activity.css">    <!---Activity's CSS-->
+    <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
 
 <style type="text/css">
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Calibri;
-        text-decoration: none;
-    }
-
-    body{
-        background: #000;
-    }
-
-    .titleHeader{
-        font-size: 50px;
-        padding: 5px 0 5px;
-        color: #fff;
-        text-align: center;
-        background: #1A2D42;
-    }
-
-    .containerHolder{
-        display: inline-block;
-        width: 100%;
-        height: 90vh;
-    }
-
-    .contentHeader{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 60px;
-        color: #fff;
-        text-align: center;
-    }
-     
-    .headerSample{
-        font-family: 'Courier New', Courier, monospace;
-        color: #fff;
-        text-align: center;
-        margin: 40px 0 40px
-    }
-
-    .textContent{
-        font-size: 30px;
-        color: #fff;
-        text-align: center;
-        margin: 25px 0px 0px;
-    }
-
-    ul a li{
-        font-size: 30px;
-        color: #fff;
-        justify-self: center;
-        text-align: center;
-        margin: 25px 0px 0px;   
-        text-decoration: dotted;
-    }
-
-    ul a li:hover{
-        color: #fff2df;
-        text-decoration: underline;
-    }
+  
 </style>
 
 <body>
-    <div class="titleHeader">Activity 9</div>
-
     <div class="containerHolder"><br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 9</h1>
+            <button class="navButton">&gt;</button>
+        </div>
         <p class="contentHeader">Hyperlink(s)</p><br>
 
 
-        <p class="textContent">A hyperlink, also known as a link or hypertext reference, is an electronic connection between two documents or
-web pages that allows users to navigate from one location to another by clicking on the link. It's a fundamental
-concept of the World Wide Web (WWW) and has revolutionized the way we access and share information.
+        <p class="textContent">
+            A hyperlink, also known as a link or hypertext reference, 
+            is an electronic connection between two documents or web pages 
+            that allows users to navigate from one location to another by clicking on the link. 
+            It's a fundamental concept of the World Wide Web (WWW) 
+            and has revolutionized the way we access and share information.
         </p>
         <br>
         <ul>
-            <a href="https://web.facebook.com/LNMNeoubie"><li>My Facebook Account</li></a>
-            <a href="https://github.com/Neoubie051117"><li>My Github Account</li></a>
+            <a class="activity9Href" href="https://web.facebook.com/LNMNeoubie"><li>My Facebook Account</li></a>
+            <a class="activity9Href" href="https://github.com/Neoubie051117"><li>My Github Account</li></a>
         </ul>
     </div>
 
