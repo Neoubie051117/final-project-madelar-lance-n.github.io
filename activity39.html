@@ -16,7 +16,8 @@
 <style>
     .webHolder {
         margin: 50px auto;
-        width: 500px;
+        width: 90%;
+        max-width: 500px;
         height: auto;
         background: #fff;
         border-radius: 10px;
@@ -24,7 +25,7 @@
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         padding-bottom: 20px;
     }
-
+    
     .webHeader {
         display: flex;
         justify-content: center;
@@ -33,43 +34,76 @@
         background-color: tomato;
         padding: 15px;
     }
-
+    
     .webTitle {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 600;
         color: #000;
     }
-
+    
     .webContent {
         padding: 20px;
         font-size: 18px;
         text-align: center;
         color: #333;
     }
-
+    
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
         margin-top: 10px;
+        width: 100%;
     }
-
+    
     .select-group {
         font-size: 18px;
         font-weight: bold;
         color: #000;
         text-align: left;
     }
-
+    
     select {
         font-size: 16px;
         padding: 10px;
-        width: 200px;
+        width: 100%;
+        max-width: 200px;
         border-radius: 5px;
         border: 1px solid #aaa;
         cursor: pointer;
     }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .webHolder {
+            width: 95%;
+        }
+    
+        .webTitle {
+            font-size: 24px;
+        }
+    
+        .webContent {
+            font-size: 16px;
+        }
+    
+        .select-group {
+            font-size: 16px;
+        }
+    
+        select {
+            font-size: 14px;
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .webTitle {
+            font-size: 32px;
+        }
+    }
+    
 </style>
 
 <body>

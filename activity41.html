@@ -16,14 +16,16 @@
 <style type="text/css">
     .webHolder {
         margin: 50px auto;
-        width: 500px;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
         background: #fff;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         padding-bottom: 20px;
     }
-
+    
     .webHeader {
         display: flex;
         justify-content: center;
@@ -32,30 +34,42 @@
         background-color: tomato;
         padding: 15px;
     }
-
+    
     .webTitle {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 600;
         color: #000;
     }
-
+    
     .webContent {
         padding: 20px;
         font-size: 18px;
         text-align: center;
         color: #333;
     }
-
+    
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        margin-top: 10px;
+        width: 100%;
     }
-
+    
+    input[type="file"] {
+        font-size: 16px;
+        padding: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        max-width: 250px;
+    }
+    
     .preview-box {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         border: 2px dashed #333;
         display: flex;
         align-items: center;
@@ -65,20 +79,20 @@
         margin-top: 10px;
         overflow: hidden;
     }
-
+    
     .preview-box img {
         max-width: 100%;
         max-height: 100%;
         border-radius: 10px;
     }
-
+    
     .button-group {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-
+    
     .button-group input {
         width: 200px;
         padding: 10px;
@@ -88,26 +102,26 @@
         cursor: pointer;
         transition: 0.3s;
     }
-
+    
     .button-group input[type="submit"] {
         background-color: #28a745;
         color: white;
     }
-
+    
     .button-group input[type="reset"] {
         background-color: #dc3545;
         color: white;
     }
-
+    
     .button-group input[type="button"] {
         background-color: #007bff;
         color: white;
     }
-
+    
     .button-group input:hover {
         opacity: 0.8;
     }
-
+    
     #fileupload {
         display: none;
     }
@@ -130,23 +144,30 @@
         transform: scale(1.05);
     }
     
-    .select-text {
-        color: white;
-        font-size: 16px;
-        text-align: center;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .webHolder {
+            width: 95%;
+        }
+    
+        .webTitle {
+            font-size: 24px;
+        }
+    
+        .webContent {
+            font-size: 16px;
+        }
+    
+        input[type="file"] {
+            font-size: 14px;
+            width: 100%;
+        }
     }
     
-    
-    input[type="image"] {
-        width: 100px;
-        height: auto;
-        border-radius: 10px;
-        transition: 0.3s;
-    }
-    
-    input[type="image"]:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    @media (min-width: 1024px) {
+        .webTitle {
+            font-size: 32px;
+        }
     }
 </style>
 

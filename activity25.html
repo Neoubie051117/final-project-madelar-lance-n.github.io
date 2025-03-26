@@ -16,46 +16,90 @@
 <style type="text/css">
     .webHolder {
         justify-self: center;
-        margin: 30px 0 0;
-        width: 700px;
-        height: 300px;
+        margin: 30px auto;
+        width: 90%;
+        max-width: 700px;
+        height: auto;
         background: #fff;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
-
+    
     .webHeader {
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: tomato;
         padding: 10px 20px;
+        flex-wrap: wrap;
     }
-
+    
     .webTitle {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 600;
         color: #000;
     }
-
+    
     .menuCategory {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
         color: #000;
-        margin-left: 20px;
+        margin-left: 15px;
         text-decoration: none;
     }
-
-    .menuCategory:hover{
+    
+    .menuCategory:hover {
         color: #fefefe;
         text-decoration: underline;
     }
-
+    
     .webContent {
-        font-size: 18px;
+        font-size: 16px;
         text-align: justify;
         color: #333;
+        padding: 15px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .webHolder {
+            width: 95%;
+        }
+    
+        .webHeader {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .menuCategory {
+            display: block;
+            margin: 5px 0;
+        }
+    
+        .webTitle {
+            font-size: 24px;
+        }
+    
+        .webContent {
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .webHolder {
+            width: 700px;
+        }
+    
+        .webTitle {
+            font-size: 32px;
+        }
+    
+        .menuCategory {
+            font-size: 20px;
+        }
     }
 </style>
 

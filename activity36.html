@@ -16,14 +16,16 @@
 <style>
     .webHolder {
         margin: 50px auto;
-        width: 500px;
-        height: 320px;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
         background: #fff;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        padding-bottom: 20px;
     }
-
+    
     .webHeader {
         display: flex;
         justify-content: center;
@@ -32,20 +34,20 @@
         background-color: tomato;
         padding: 15px;
     }
-
+    
     .webTitle {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 600;
         color: #000;
     }
-
+    
     .webContent {
         padding: 20px;
         font-size: 18px;
         text-align: center;
         color: #333;
     }
-
+    
     form {
         display: flex;
         flex-direction: column;
@@ -53,7 +55,7 @@
         gap: 15px;
         margin-top: 10px;
     }
-
+    
     label {
         display: flex;
         flex-direction: column;
@@ -62,33 +64,67 @@
         font-weight: bold;
         color: #000;
     }
-
-    textarea {
+    
+    input, textarea {
         width: 90%;
         max-width: 450px;
-        min-height: 120px;
         padding: 10px;
         font-size: 16px;
         border: 2px solid #aaa;
         border-radius: 10px;
         outline: none;
         transition: 0.3s;
-        resize: vertical;
+        margin-top: 5px;
         background: #f9f9f9;
         color: #333;
         font-family: Calibri, sans-serif;
     }
-
-    textarea:focus {
+    
+    input:focus, textarea:focus {
         border-color: tomato;
         box-shadow: 0 0 8px rgba(255, 99, 71, 0.5);
         background: #fff;
     }
-
-    textarea:hover {
+    
+    input:hover, textarea:hover {
         border-color: #555;
     }
-
+    
+    textarea {
+        min-height: 120px;
+        resize: none;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .webHolder {
+            width: 95%;
+        }
+    
+        .webTitle {
+            font-size: 24px;
+        }
+    
+        .webContent {
+            font-size: 16px;
+        }
+    
+        label {
+            font-size: 16px;
+        }
+    
+        input, textarea {
+            font-size: 14px;
+            width: 100%;
+            max-width: none;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .webTitle {
+            font-size: 32px;
+        }
+    }
 </style>
 
 <body>

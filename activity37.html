@@ -16,7 +16,8 @@
 <style>
     .webHolder {
         margin: 50px auto;
-        width: 500px;
+        width: 90%;
+        max-width: 500px;
         height: auto;
         background: #fff;
         border-radius: 10px;
@@ -24,7 +25,7 @@
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         padding-bottom: 20px;
     }
-
+    
     .webHeader {
         display: flex;
         justify-content: center;
@@ -33,34 +34,35 @@
         background-color: tomato;
         padding: 15px;
     }
-
+    
     .webTitle {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 600;
         color: #000;
     }
-
+    
     .webContent {
         padding: 20px;
         font-size: 18px;
         text-align: center;
         color: #333;
     }
-
+    
     form {
         display: flex;
         flex-direction: column;
-        margin: 0 2rem 0;
+        align-items: left;
+        margin: 0 20px;
         gap: 15px;
         margin-top: 10px;
     }
-
+    
     .checkbox-group {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-
+    
     .checkbox-group label {
         display: flex;
         align-items: center;
@@ -70,7 +72,7 @@
         color: #000;
         cursor: pointer;
     }
-
+    
     .checkbox-group input[type="checkbox"] {
         appearance: none;
         width: 20px;
@@ -81,27 +83,44 @@
         transition: 0.3s;
         position: relative;
     }
-
+    
     .checkbox-group input[type="checkbox"]:checked {
         background-color: tomato;
         border-color: tomato;
     }
-
-    .checkbox-group input[type="checkbox"]::before {
-        font-size: 16px;
-        color: white;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-    }
-
-    .checkbox-group input[type="checkbox"]:checked::before {
-        display: block;
-    }
-
+    
     .checkbox-group input[type="checkbox"]:hover {
         border-color: #555;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .webHolder {
+            width: 95%;
+        }
+    
+        .webTitle {
+            font-size: 24px;
+        }
+    
+        .webContent {
+            font-size: 16px;
+        }
+    
+        .checkbox-group label {
+            font-size: 16px;
+        }
+    
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .webTitle {
+            font-size: 32px;
+        }
     }
 </style>
 

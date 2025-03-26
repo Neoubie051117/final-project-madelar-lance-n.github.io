@@ -16,26 +16,56 @@
 <style type="text/css">
     .spanTag {
         display: inline-block;
-        font-size: 24px;
-        padding: 10px 20px;
+        font-size: 22px;
+        padding: 8px 16px;
         color: #000;
         background-color: orange;
         border-radius: 5px;
-        margin: 20px 0;
+        margin: 15px 5px 0;
+        text-align: center;
     }
-
+    
     .divTag {
         display: block;
-        font-size: 24px;
-        padding: 15px;
+        font-size: 22px;
+        padding: 12px;
         color: #fff;
         background-color: teal;
         border-radius: 5px;
         margin: 20px auto;
+        text-align: center;
     }
-
+    
     .contentBoard {
         color: #fff;
+        text-align: center;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .spanTag {
+            font-size: 18px;
+            padding: 6px 12px;
+            display: block;
+            margin: 10px auto;
+        }
+    
+        .divTag {
+            font-size: 18px;
+            padding: 10px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .spanTag {
+            font-size: 24px;
+            padding: 10px 20px;
+        }
+    
+        .divTag {
+            font-size: 24px;
+            padding: 15px;
+        }
     }
 </style>
 
