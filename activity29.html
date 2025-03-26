@@ -13,6 +13,18 @@
     <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
 
+<style type="text/css">
+    table {
+        border-collapse: separate; /* Enables proper spacing */
+        border-spacing: 5px; /* Matches your cellspacing */
+      }
+      
+      td, th {
+        padding: 15px; /* Emphasized padding */
+        text-align: left;
+      }
+</style>
+
 <body>
     <div class="containerHolder"><br>
         <div class="navContainer">
@@ -20,8 +32,23 @@
             <h1 class="titleHeader">Activity 29</h1>
             <button class="navButton">&gt;</button>
         </div>
-        <p class="contentHeader" >Title</p><br>
+        <p class="contentHeader" >Table Cellpadding</p><br>
 
+        <table border = "1" cellpadding = "5" cellspacing = "5">
+            <tr>
+               <th>Name</th>
+               <th>Salary</th>
+            </tr>
+            <tr>
+               <td>Ramesh Raman</td>
+               <td>5000</td>
+            </tr>
+            <tr>
+               <td>Shabbir Hussein</td>
+               <td>7000</td>
+            </tr>
+         </table>
+   
     </div>
 </body>
 </html>

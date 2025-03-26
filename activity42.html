@@ -13,6 +13,66 @@
     <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
 
+<style type="text/css">
+    /* Title */
+.title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-bold);
+    text-shadow: var(--glow-white);
+  }
+  
+  /* Description & Notes */
+  .description,
+  .note {
+    font-size: var(--font-size-base);
+    padding: var(--padding-default);
+    border-radius: 5px;
+  }
+  
+  /* Image Gallery */
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  /* Images with Transparency Effect */
+  .image-hover {
+    width: 300px;
+    height: 250px;
+    margin: 20px 20px 20px;
+    transition: var(--transition-default);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .image-hover:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+    box-shadow: var(--glow-red);
+  }
+
+  
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .image-gallery {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .image-hover {
+      height: auto;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    .image-gallery {
+      flex-direction: row;
+    }
+  }
+</style>
+
 <body>
     <div class="containerHolder"><br>
         <div class="navContainer">
@@ -20,8 +80,20 @@
             <h1 class="titleHeader">Activity 42</h1>
             <button class="navButton">&gt;</button>
         </div>
-        <p class="contentHeader" >Title</p><br>
+        <p class="contentHeader" >Image Transparency</p><br>    
+        <p class="description">
+            The <b>opacity</b> property is often used together with the <b>:hover</b> selector to change the opacity on mouse-over:
+        </p>
 
+        <div class="image-gallery">
+            <img class="image-hover" src="./assets/BodyContentImage.jpg" alt="AU Logo">
+            <img class="image-hover" src="./assets/BodyContentImage.jpg" alt="AU Logo">
+            <img class="image-hover" src="./assets/BodyContentImage.jpg" alt="AU Logo">
+        </div>
+
+        <p class="note">
+            <b>Note:</b> In IE, a <b>!DOCTYPE</b> must be added for the <b>:hover</b> selector to work on elements other than the <b>&lt;a&gt;</b> element.
+        </p>
     </div>
 </body>
 </html>

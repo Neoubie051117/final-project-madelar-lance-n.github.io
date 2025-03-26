@@ -13,6 +13,49 @@
     <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
 
+<style type="text/css">
+    table {
+        border-collapse: separate;
+        border-spacing: 5px; /* Adds spacing */
+        background-color: var(--bg-darker); /* Matches bgcolor */
+        color: var(--bg-dark); /* Dark text for contrast */
+        font-family: var(--font-family);
+        font-size: var(--font-size-base);
+        box-shadow: var(--box-shadow);
+        border: 2px solid var(--text-primary); /* Matches bordercolor */
+      }
+      
+      td, th {
+        border: 2px solid var(--accent-primary); /* Keeps green borders */
+        padding: 15px; /* Emphasized padding */
+        text-align: left;
+      }
+      
+      th {
+        background-color: var(--bg-darker);
+        font-weight: var(--font-weight-bold);
+        color: var(--text-primary);
+      }
+      
+      tr{
+        background-color: var(--text-primary); /* Slight variation */  
+        color: var(--accent-primary); 
+      }
+      
+      tr:hover {
+        background-color: var(--accent-primary);
+        transition: var(--transition-default);
+      }
+      
+      td[rowspan], td[colspan] {
+        background-color: var(--bg-dark); /* Highlight merged cells */
+        font-weight: bold;
+        text-align: center;
+        color: var(--text-primary);
+      }
+      
+</style>
+
 <body>
     <div class="containerHolder"><br>
         <div class="navContainer">
@@ -20,8 +63,25 @@
             <h1 class="titleHeader">Activity 33</h1>
             <button class="navButton">&gt;</button>
         </div>
-        <p class="contentHeader" >Title</p><br>
-
+        <p class="contentHeader" >Table Background</p><br>
+        <table border = "1" bordercolor = "green" background = "chiefs.jpg">
+            <tr>
+               <th>Column 1</th>
+               <th>Column 2</th>
+               <th>Column 3</th>
+            </tr>
+            <tr>
+               <td rowspan = "2">Row 1 Cell 1</td>
+               <td>Row 1 Cell 2</td><td>Row 1 Cell 3</td>
+            </tr>
+            <tr>
+               <td>Row 2 Cell 2</td>
+               <td>Row 2 Cell 3</td>
+            </tr>
+            <tr>
+               <td colspan = "3">Row 3 Cell 1</td>
+            </tr>
+         </table>
     </div>
 </body>
 </html>

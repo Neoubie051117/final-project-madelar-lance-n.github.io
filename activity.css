@@ -145,6 +145,37 @@ body {
   margin: 0 0 30px;
 }
 
+/*Activity 27*/
+table {
+  width: fit-content;
+  border-collapse: collapse;
+  background-color: var(--bg-darkest);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  box-shadow: var(--box-shadow);
+}
+
+td, th {
+  border: 1px solid var(--accent-primary);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-darker);
+  font-weight: var(--font-weight-bold);
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg-dark);
+}
+
+tr:hover {
+  background-color: var(--accent-primary);
+  transition: var(--transition-default);
+}
+
 .navContainer {
   display: flex;
   align-items: center;
