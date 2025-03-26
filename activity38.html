@@ -4,140 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 38 By Lance N. Madelar</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Calibri, sans-serif;
-            text-decoration: none;
-        }
-
-        body {
-            background: #000;
-        }
-
-        .titleHeader {
-            font-size: 50px;
-            padding: 10px;
-            color: #fff;
-            text-align: center;
-            background: #1A2D42;
-        }
-
-        .containerHolder {
-            width: 100%;
-            text-align: center;
-            padding-top: 20px; 
-        }
-        
-        .contentHeader {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 60px;
-            color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .webHolder {
-            margin: 50px auto;
-            width: 500px;
-            height: auto;
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-            padding-bottom: 20px;
-        }
-
-        .webHeader {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            background-color: tomato;
-            padding: 15px;
-        }
-
-        .webTitle {
-            font-size: 32px;
-            font-weight: 600;
-            color: #000;
-        }
-
-        .webContent {
-            padding: 20px;
-            font-size: 18px;
-            text-align: center;
-            color: #333;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            margin: 0 5em 0;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .radio-group {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .radio-group label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #000;
-            cursor: pointer;
-        }
-
-        .radio-group input[type="radio"] {
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #aaa;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.3s;
-            position: relative;
-        }
-
-        .radio-group input[type="radio"]:checked {
-            background-color: tomato;
-            border-color: tomato;
-        }
-
-        .radio-group input[type="radio"]::before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-        }
-
-        .radio-group input[type="radio"]:checked::before {
-            display: block;
-        }
-
-        .radio-group input[type="radio"]:hover {
-            border-color: #555;
-        }
-    </style>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="activity.css">    <!---Activity's CSS-->
+    <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
-<body>
-    <div class="titleHeader">Activity 38</div>
 
+<style type="text/css">
+    .webHolder {
+        margin: 50px auto;
+        width: 500px;
+        height: auto;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        padding-bottom: 20px;
+    }
+
+    .webHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: tomato;
+        padding: 15px;
+    }
+
+    .webTitle {
+        font-size: 32px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .webContent {
+        padding: 20px;
+        font-size: 18px;
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 5em 0;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+        cursor: pointer;
+    }
+
+    .radio-group input[type="radio"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #aaa;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .radio-group input[type="radio"]:checked {
+        background-color: tomato;
+        border-color: tomato;
+    }
+
+    .radio-group input[type="radio"]::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .radio-group input[type="radio"]:checked::before {
+        display: block;
+    }
+
+    .radio-group input[type="radio"]:hover {
+        border-color: #555;
+    }
+</style>
+
+<body>
     <div class="containerHolder">
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 38</h1>
+            <button class="navButton">&gt;</button>
+        </div>
         <p class="contentHeader">Radio Button(s) in Forms</p>
 
         <div class="webHolder">

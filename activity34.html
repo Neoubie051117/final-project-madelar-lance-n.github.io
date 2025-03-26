@@ -4,114 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 34 By Lance N. Madelar</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Calibri, sans-serif;
-            text-decoration: none;
-        }
-
-        body {
-            background: #000;
-        }
-
-        .titleHeader {
-            font-size: 50px;
-            padding: 10px;
-            color: #fff;
-            text-align: center;
-            background: #1A2D42;
-        }
-
-        .containerHolder {
-            width: 100%;
-            text-align: center;
-            padding-top: 20px; 
-        }
-        
-        .contentHeader {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 60px;
-            color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .webHolder {
-            margin: 50px auto;
-            width: 500px;
-            height: 320px;
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        }
-
-        .webHeader {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            background-color: tomato;
-            padding: 15px;
-        }
-
-        .webTitle {
-            font-size: 32px;
-            font-weight: 600;
-            color: #000;
-        }
-
-        .webContent {
-            padding: 20px;
-            font-size: 18px;
-            text-align: center;
-            color: #333;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        label {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-size: 18px;
-            font-weight: bold;
-            color: #000;
-        }
-
-        input[type="text"] {
-            width: 250px;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #aaa;
-            border-radius: 10px;
-            outline: none;
-            transition: 0.3s;
-            margin-top: 5px;
-        }
-
-        input[type="text"]:focus {
-            border-color: tomato;
-            box-shadow: 0 0 8px rgba(255, 99, 71, 0.5);
-        }
-
-        input[type="text"]:hover {
-            border-color: #555;
-        }
-    </style>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="activity.css">    <!---Activity's CSS-->
+    <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
-<body>
-    <div class="titleHeader">Activity 34</div>
 
+<style>
+    .webHolder {
+        margin: 50px auto;
+        width: 500px;
+        height: 320px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .webHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: tomato;
+        padding: 15px;
+    }
+
+    .webTitle {
+        font-size: 32px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .webContent {
+        padding: 20px;
+        font-size: 18px;
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+    }
+
+    input[type="text"] {
+        width: 250px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #aaa;
+        border-radius: 10px;
+        outline: none;
+        transition: 0.3s;
+        margin-top: 5px;
+    }
+
+    input[type="text"]:focus {
+        border-color: tomato;
+        box-shadow: 0 0 8px rgba(255, 99, 71, 0.5);
+    }
+
+    input[type="text"]:hover {
+        border-color: #555;
+    }
+</style>
+
+<body>
     <div class="containerHolder">
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 34</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+
         <p class="contentHeader">Text Inputs in Forms</p>
 
         <div class="webHolder">
@@ -133,6 +113,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>

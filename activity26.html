@@ -4,75 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity 26 By Lance N. Madelar</title>
-    <style type="text/css">
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Calibri, sans-serif;
-            text-decoration: none;
-        }
-
-        body {
-            background: #000;
-        }
-
-        .titleHeader {
-            font-size: 50px;
-            padding: 10px;
-            color: #fff;
-            text-align: center;
-            background: #1A2D42;
-        }
-
-        .containerHolder {
-            width: 100%;
-            text-align: center;
-            padding-top: 20px;
-        }
-
-        .contentHeader {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 60px;
-            color: #fff;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .spanTag {
-            display: inline-block;
-            font-size: 24px;
-            padding: 10px 20px;
-            color: #000;
-            background-color: orange;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-
-        .divTag {
-            display: block;
-            font-size: 24px;
-            padding: 15px;
-            color: #fff;
-            background-color: teal;
-            border-radius: 5px;
-            margin: 20px auto;
-        }
-
-        .contentBoard {
-            color: #fff;
-        }
-    </style>
+  
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="activity.css">    <!---Activity's CSS-->
+    <script src="activity.js" defer></script>     <!-- Activity's Scipts -->
 </head>
-<body>
-    <div class="titleHeader">Activity 26</div>
 
+<style type="text/css">
+    .spanTag {
+        display: inline-block;
+        font-size: 24px;
+        padding: 10px 20px;
+        color: #000;
+        background-color: orange;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+
+    .divTag {
+        display: block;
+        font-size: 24px;
+        padding: 15px;
+        color: #fff;
+        background-color: teal;
+        border-radius: 5px;
+        margin: 20px auto;
+    }
+
+    .contentBoard {
+        color: #fff;
+    }
+</style>
+
+<body>
     <div class="containerHolder">
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 26</h1>
+            <button class="navButton">&gt;</button>
+        </div>
         <p class="contentHeader">Span vs Div Tag</p>
 
         <div class="contentBoard">
-            <span class="spanTag">Span tag: Used for inline organization and styling</span><br>
+            <span class="spanTag">Span tag: Used for inline organization and styling</span>
+            <span class="spanTag">Span Element 1</span>
+            <span class="spanTag">Span Elmeent 2</span>
             <div class="divTag">Div tag: Used for block-level organization and styling</div>
+            <div class="divTag">Division Element 1</div>
+            <div class="divTag">Division Element 2</div>
         </div>
     </div>
 </body>
