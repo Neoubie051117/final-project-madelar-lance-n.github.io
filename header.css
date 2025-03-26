@@ -152,6 +152,7 @@ html {
 .sign-up:hover {
   background: var(--accent-hover);
   box-shadow: var(--glow-red);
+  color: var(--text-primary);
 }
 
 /* Mobile Menu Styles */

@@ -3,9 +3,9 @@
     --logo-height: 40px;
     --button-padding: 10px 20px;
     --button-radius: 5px;
-    --nav-gap: 20px;
-    --header-padding: 15px 40px;
-    --mobile-menu-width: 270px;
+    --nav-gap: 15px;
+    --header-padding: 15px 20px;
+    --mobile-menu-width: 768px;
 
     /* Colors */
     --bg-dark: #121212;
@@ -29,13 +29,6 @@
     --transition-default: all 0.3s ease-in-out;
   }
 
-  /* Global reset and font settings */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-family);
-  }
 
   body {
     background: var(--bg-dark);
@@ -51,10 +44,9 @@
 
   /* Page title styling */
   .pageTitleHeader {
-    font-size: var(--font-size-title);
+    font-size: calc(15px + var(--font-size-title));
     padding: var(--header-padding);
-    margin-bottom: var(--nav-gap);
-    box-shadow: var(--box-shadow);
+    margin: 10px 0 calc(var(--nav-gap) - 20px);
   }
 
   /* Container layout */
@@ -133,6 +125,8 @@
 
   select, input, textarea {
     width: 100%;
+    max-width: 100%; /* Prevents elements from exceeding parent width */
+  box-sizing: border-box; /* Includes padding & border in the total width */  
     font-size: var(--font-size-base);
     padding: 12px;
     background: var(--bg-darker);
@@ -194,3 +188,101 @@
       padding: 0 15px;
     }
   }
+
+  /* Disable textarea resizing */
+textarea {
+  resize: none;
+}
+
+/* Standardize section widths */
+.section {
+  width: 100%; /* Ensures consistent width across sections */
+  max-width: 600px; /* Limits size for large screens */
+  margin: 0 auto; /* Centers sections */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .section {
+    min-width: 100%; /* Ensures sections are full width */
+    margin: 0 0 10px;
+  }
+}
+
+/* Add this at the end of your CSS */
+@media (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    padding: 15px;
+    margin: 0 0 10px;
+  }
+
+  .pageTitleHeader {
+    padding: 15px 10px;
+    font-size: 1.5rem;
+  }
+
+  /* Adjust form elements for mobile */
+  .group, .radio-group {
+    margin-bottom: 15px;
+  }
+
+  /* Stack birthdate selects vertically */
+  .group > select {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  /* Make image preview smaller */
+  .image-preview {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Adjust input sizes */
+  input, select, textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Stack buttons vertically */
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  /* Fix radio group alignment */
+  .radio-group {
+    flex-wrap: nowrap;
+    
+  }
+
+  .radio-group label {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}

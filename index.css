@@ -130,11 +130,23 @@ p {
   transition: var(--transition-default);
   align-self: flex-start;
   border-radius: var(--button-radius);
+  margin: 20px 0 0;
+}
+
+.join-button a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .join-button:hover {
   background-color: var(--accent-hover);
   box-shadow: var(--glow-red);
+}
+
+.join-button a:hover{
+  color: var;
 }
 
 .hero {
