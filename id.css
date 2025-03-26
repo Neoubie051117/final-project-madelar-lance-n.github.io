@@ -1,0 +1,196 @@
+:root {
+    /* Sizes & Spacing */
+    --logo-height: 40px;
+    --button-padding: 10px 20px;
+    --button-radius: 5px;
+    --nav-gap: 20px;
+    --header-padding: 15px 40px;
+    --mobile-menu-width: 270px;
+
+    /* Colors */
+    --bg-dark: #121212;
+    --bg-darker: #181818;
+    --bg-darkest: #282828;
+    --text-primary: #FFFFFF;
+    --accent-primary: #E55B45;
+    --accent-hover: #FF6C4F;
+    --border-dark: #323232;
+    --glow-white: 0 0 15px rgba(255, 255, 255, 1);
+    --glow-red: 0 0 15px rgba(229, 91, 69, 1);
+
+    /* Typography */
+    --font-family: Arial, sans-serif;
+    --font-size-base: 16px;
+    --font-size-title: 22px;
+    --font-weight-bold: 700;
+
+    /* Effects */
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    --transition-default: all 0.3s ease-in-out;
+  }
+
+  /* Global reset and font settings */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+  }
+
+  body {
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    text-align: center;
+    padding: var(--nav-gap);
+  }
+
+  /* Hide scrollbar */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Page title styling */
+  .pageTitleHeader {
+    font-size: var(--font-size-title);
+    padding: var(--header-padding);
+    margin-bottom: var(--nav-gap);
+    box-shadow: var(--box-shadow);
+  }
+
+  /* Container layout */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--nav-gap);
+    padding: 0 var(--header-padding);
+  }
+
+  /* Sections styling */
+  .section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: var(--bg-darkest);
+    border-radius: var(--button-radius);
+    border: 1px solid var(--border-dark);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--nav-gap);
+  }
+
+  /* Image preview and upload */
+  .image-preview {
+    width: 150px;
+    height: 150px;
+    background: var(--bg-darker);
+    border-radius: 10px;
+    margin: 0 auto var(--nav-gap);
+    display: block;
+  }
+
+  #imageUpload {
+    margin: 1rem;
+    font-size: var(--font-size-base);
+    width: 12rem;
+  }
+
+  /* Group styling for labels and inputs */
+  .group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: var(--nav-gap);
+  }
+
+  /* Radio button group styling */
+  .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: var(--nav-gap);
+  }
+
+  .radio-group input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-dark);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition-default);
+  }
+
+  .radio-group input[type="radio"]:checked {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+  }
+
+  /* Standardize label and input styles */
+  label {
+    font-size: var(--font-size-base);
+    margin-bottom: 5px;
+  }
+
+  select, input, textarea {
+    width: 100%;
+    font-size: var(--font-size-base);
+    padding: 12px;
+    background: var(--bg-darker);
+    color: var(--text-primary);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--button-radius);
+    transition: var(--transition-default);
+  }
+
+  select:focus, input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: var(--glow-red);
+  }
+
+  /* Button container styling */
+  .btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: var(--nav-gap);
+  }
+
+  .btn {
+    padding: var(--button-padding);
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    border-radius: var(--button-radius);
+    transition: var(--transition-default);
+  }
+
+  .submit-btn {
+    background: var(--accent-primary);
+    color: var(--text-primary);
+  }
+
+  .submit-btn:hover {
+    background: var(--accent-hover);
+    box-shadow: var(--glow-red);
+  }
+
+  .clear-btn {
+    background: var(--bg-darker);
+    color: var(--text-primary);
+    border: 1px solid var(--border-dark);
+  }
+
+  .clear-btn:hover {
+    background: var(--bg-dark);
+    box-shadow: var(--glow-white);
+  }
+
+  /* Responsive adjustments for mobile view */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px;
+    }
+  }

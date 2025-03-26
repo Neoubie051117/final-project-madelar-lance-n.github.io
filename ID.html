@@ -1,386 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School ID Registry By Lance N. Madelar</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Calibri, sans-serif;
-        }
-
-        body {
-            background: #000;
-            color: #fff;
-            text-align: center;
-        }
-
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
-        .pageTitleHeader {
-            font-size: 40px;
-            padding: 15px;
-            background: #1A2D42;
-            margin-bottom: 20px;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap-reverse;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .top-left, .top-right {
-            flex: 1;
-            min-width: 300px;
-            padding: 20px;
-            background: #222;
-            border-radius: 10px;
-        }
-
-        .bottom {
-            width: 100%;
-            padding: 20px;
-            background: #222;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .image-preview {
-            width: 150px;
-            height: 150px;
-            background: #fff;
-            display: block;
-            border-radius: 10px;
-            margin: 0 auto 0;
-        }
-
-        #imageUpload{
-            margin: 1rem;
-            font-size: 12px;
-            width: 12rem;
-        }
-
-        .noteImageUpload{
-            text-align: center;
-            width: 100%;
-        }
-
-        .group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-
-        .genderGroup {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0 0 15px;
-        }
-
-        .radio-group label {
-            display: flex;
-            align-items: center;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .radio-group input[type="radio"] {
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #aaa;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.3s;
-            position: relative;
-        }
-
-        .radio-group input[type="radio"]:checked {
-            background-color: #fff;
-            border-color: teal;
-        }
-
-        .radio-group input[type="radio"]::before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-        }
-
-
-        .radio-group input[type="radio"]:hover {
-            border-color: #555;
-        }
-
-        label {
-            display: block;
-            width: 20rem;
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-
-        select, input, textarea {
-            position: relative;
-            width: 100%;
-            font-size: 24px;
-            padding: 12px;
-            background: #000000;
-            color: #fff;
-            border: 1px solid #000;
-            border-radius: 3px; 
-        }
-
-        .btn-container {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-
-        .submit-btn {
-            background: #28a745;
-            color: white;
-        }
-
-        .clear-btn {
-            background: #dc3545;
-            color: white;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        #month{
-            width: 11rem;
-            text-align: center;
-            margin-right: 35px;
-        }
-
-        #day{
-            width: 11rem;
-            text-align: center;
-            margin-right: 35px;
-        }
-
-        #year{
-            width: 12rem;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School ID Registry By Lance N. Madelar</title>
+  
+  <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+  <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+  <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+  <link rel="stylesheet" href="footer.css">   <!---Footer's CSS--> 
+  <link rel="stylesheet" href="id.css">    <!---ID's CSS-->
+  <script src="id.js" defer></script>     <!-- ID's Scipts -->
 </head>
 <body>
-    <div class="pageTitleHeader">School ID Registry</div>
-    <div class="container">
+    <div class="content">
+        <div class="pageTitleHeader">School ID Registry</div>
+  
+  <!-- Wrap the inputs in a form for better semantics -->
+  <form class="container">
+    <div class="section" id="left-section">
+      <img id="imagePreview" class="image-preview" alt="Upload Formal Picture Here">
+      <input type="file" id="imageUpload" accept="image/*">
+      
 
-        <div class="top-left">
-            <img id="imagePreview" class="image-preview">
-            <input type="file" id="imageUpload" accept="image/*" alt="Formal Picture"><br>
-            <label  class="noteImageUpload">Upload Formal Picture</label><br>
+      <div class="group">
+        <label for="guardian">Guardian</label>
+        <input type="text" id="guardian" name="guardian" required placeholder="Name of Parent / Relative / Caretaker">
+      </div>
 
-
-            <div class="group">
-                <label>Guardian:</label>
-                <input type="text" required placeholder="Name of: Parent / Relative / Caretaker">
-            </div>
-
-            <div class="group">
-                <label>Birthdate:</label>
-                <select id="month">
-                    <option value="" disabled selected>Month</option>
-                </select>
-                <select id="day">
-                    <option value="" disabled selected>Day</option>
-                </select>
-                <select id="year">
-                    <option value="" disabled selected>Year</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="top-right">
-            <div class="group">
-                <label>First Name:</label>  
-                <input type="text" required placeholder="Enter name">
-            </div>
-            <div class="group">
-                <label>Last Name:</label>
-                <input type="text" required placeholder="Enter family name">
-            </div>
-            <div class="genderGroup radio-group">
-                <label>Gender:</label>
-                    <input type="radio" id="male" name="gender" value="Male" required>
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="Female" required>
-                    <label for="female">Female</label>
-            </div>
-            <div class="group">
-                <label>Course:</label>
-                <select required>
-                    <option value="" disabled selected>Select program</option>
-                    <option value="BSCS">Bachelor of Science in Computer Science (BSCS)</option>
-                    <option value="BSIT">Bachelor of Science in Information Technology (BSIT)</option>
-                    <option value="BSN">Bachelor of Science in Nursing (BSN)</option>
-                    <option value="BSN">Bachelor of Science in Business Administration (BSBA)</option>
-                    <option value="AB-Psychology">Bachelor of Arts in Psychology (AB-Psychology)</option>
-                </select>
-            </div>
-            <div class="group">
-                <label>Year Level:</label>
-                <select required>
-                    <option value="" disabled selected>Select year level</option>
-                    <option value="1stYear">1st Year</option>
-                    <option value="2stYear">2nd Year</option>
-                    <option value="3stYear">3rd Year</option>
-                    <option value="4stYear">4th Year</option>
-                    <option value="5stYear">5th Year</option>
-                </select>   
-            </div>
-            <div class="group">
-                <label>Email:</label>
-                <input type="email" required placeholder="Example@gmail.com">
-            </div>
-            <div class="group">
-                <label>Contact Number:</label>
-                <input type="text" required placeholder="63 - 012 345 6789">
-            </div>
-        </div>
-
+      <div class="group">
+        <label>Birthdate</label>
+        <select id="month" name="month" required>
+          <option value="" disabled selected>Month</option>
+          <!-- Month options to be populated dynamically -->
+        </select>
+        <select id="day" name="day" required>
+          <option value="" disabled selected>Day</option>
+          <!-- Day options to be populated dynamically -->
+        </select>
+        <select id="year" name="year" required>
+          <option value="" disabled selected>Year</option>
+          <!-- Year options to be populated dynamically -->
+        </select>
+      </div>
     </div>
-    <div class="bottom">
-        <div class="group">
-            <label>Address:</label>
-            <textarea rows="2" required placeholder="Enter complete physical address"></textarea>
-        </div>
-        <div class="btn-container">
-            <button type="submit" class="btn submit-btn">Submit</button>
-            <button type="button" class="btn clear-btn" id="clearForm">reset</button>
-        </div>
+
+    <div class="section" id="right-section">
+      <div class="group">
+        <label for="firstName">First Name</label>  
+        <input type="text" id="firstName" name="firstName" required placeholder="Enter name">
+      </div>
+      <div class="group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required placeholder="Enter family name">
+      </div>
+      <div class="radio-group">
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label>
+      </div>
+      <div class="group">
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+          <option value="" disabled selected>Select program</option>
+          <option value="BSCS">Bachelor of Science in Computer Science (BSCS)</option>
+          <option value="BSIT">Bachelor of Science in Information Technology (BSIT)</option>
+          <option value="BSNursing">Bachelor of Science in Nursing (BSN)</option>
+          <option value="BSBA">Bachelor of Science in Business Administration (BSBA)</option>
+          <option value="ABPsychology">Bachelor of Arts in Psychology (AB-Psychology)</option>
+        </select>
+      </div>
+      <div class="group">
+        <label for="yearLevel">Year Level</label>
+        <select id="yearLevel" name="yearLevel" required>
+          <option value="" disabled selected>Select year level</option>
+          <option value="1stYear">1st Year</option>
+          <option value="2ndYear">2nd Year</option>
+          <option value="3rdYear">3rd Year</option>
+          <option value="4thYear">4th Year</option>
+          <option value="5thYear">5th Year</option>
+        </select>   
+      </div>
+      <div class="group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Example@gmail.com">
+      </div>
+      <div class="group">
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" name="contact" required placeholder="63 - 012 345 6789">
+      </div>
+    </div>
+
+    <div class="section" id="bottom-section">
+      <div class="group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="2" required placeholder="Enter complete physical address"></textarea>
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="btn submit-btn">Submit</button>
+        <button type="reset" class="btn clear-btn" id="clearForm">Reset</button>
+      </div>
+    </div>
+  </form>
     </div>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Image preview
-        document.getElementById('imageUpload').addEventListener('change', function (event) {
-            const reader = new FileReader();
-            reader.onload = function () {
-                document.getElementById('imagePreview').src = reader.result;
-            };
-            reader.readAsDataURL(event.target.files[0]);
-        });
-    
-        // Form reset
-        document.getElementById('clearForm').addEventListener('click', function () {
-            document.querySelectorAll('input, select, textarea').forEach(field => {
-                if (field.type === 'radio' || field.type === 'checkbox') {
-                    field.checked = false;
-                } else if (field.type === 'file') {
-                    field.value = '';
-                    document.getElementById('imagePreview').src = '';
-                } else {
-                    field.value = '';
-                }
-            });
-        });
-    
-        // Email validation
-        function validateEmail(email) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
-        }
-    
-        // Submit button validation
-        document.querySelector('.submit-btn').addEventListener('click', function () {
-            const requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
-            let isValid = true;
-    
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                }
-            });
-    
-            const genderSelected = document.querySelector('input[name="gender"]:checked');
-            if (!genderSelected) {
-                isValid = false;
-            }
-    
-            const imageUploaded = document.getElementById('imageUpload').files.length > 0;
-            if (!imageUploaded) {
-                isValid = false;
-            }
-    
-            const emailField = document.querySelector('input[type="email"]');
-            if (!validateEmail(emailField.value)) {
-                isValid = false;
-                alert('Please enter a valid email address.');
-            }
-    
-            if (isValid) {
-                alert('Form submitted successfully!');
-            } else {
-                alert('Please fill in all required fields correctly.');
-            }
-        });
-    
-        // Populate birthdate dropdowns
-        function populateBirthdate() {
-            const monthSelect = document.getElementById('month');
-            const daySelect = document.getElementById('day');
-            const yearSelect = document.getElementById('year');
-    
-            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            months.forEach((month, i) => {
-                let option = document.createElement("option");
-                option.value = i + 1;
-                option.text = month;
-                monthSelect.appendChild(option);
-            });
-    
-            for (let i = 1; i <= 31; i++) {
-                let option = document.createElement("option");
-                option.value = i;
-                option.text = i;
-                daySelect.appendChild(option);
-            }
-    
-            const currentYear = new Date().getFullYear();
-            for (let i = currentYear; i >= 1900; i--) {
-                let option = document.createElement("option");
-                option.value = i;
-                option.text = i;
-                yearSelect.appendChild(option);
-            }
-        }
-    
-        populateBirthdate();
-    });
-</script>
 </html>

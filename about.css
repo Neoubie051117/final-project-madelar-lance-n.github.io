@@ -1,0 +1,147 @@
+/* About Page Styles */
+.content {
+    padding: 5vw;
+    min-height: calc(100vh - 140px);
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.left-side {
+    flex: 1;
+    min-width: 300px;
+}
+
+.right-side {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.name-intro {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+}
+
+.showcase {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 25px;
+}
+
+.about-content {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.skill-icons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-container {
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-darkest);
+    border-radius: 10px;
+    border: 2px solid var(--border-dark);
+    transition: var(--transition-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px; /* Added padding */
+}
+
+/* Added SVG styling */
+.skill-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1); /* Makes black SVG white */
+    transition: var(--transition-default);
+}
+
+.skill-container:hover {
+    box-shadow: var(--glow-red);
+}
+.hire-button {
+    background: var(--accent-primary);
+    color: #000000;
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+    border: none;
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+    transition: var(--transition-default);
+    font-size: 1.1rem;
+}
+
+.hire-button:hover {
+    background: var(--accent-hover);
+    box-shadow: var(--glow-red);
+    color: var(--text-primary);
+}
+
+.image-person {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--accent-primary);
+    box-shadow: var(--glow-red);
+}
+
+.image-person img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .right-side {
+        order: -1; /* Moves image to top */
+    }
+    
+    .left-side {
+        order: 1; /* Moves content below image */
+    }
+    
+    .skill-icons {
+        justify-content: center;
+    }
+    
+    .hire-button {
+        margin: 0 auto;
+    }
+    
+    .image-person {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-person {
+        width: 200px;
+        height: 200px;
+    }
+}
+

@@ -134,6 +134,7 @@ p {
 
 .join-button:hover {
   background-color: var(--accent-hover);
+  box-shadow: var(--glow-red);
 }
 
 .hero {
@@ -157,4 +158,8 @@ p {
   opacity: 1;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-in-out forwards 0.6s;
+}
+
+.text-container button a:hover{
+  color: #fff;
 }

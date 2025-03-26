@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Define margin rules for specific pages
             const marginRules = {
                 "container-activities.html": "0px",
+                "id.html": "70px"
                 // Add more pages and their margins here if needed
             };
 
