@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 50 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="header.css">
+    <script src="footer.js" defer></script>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="css-activity.css">
+    <script src="css.activity.js" defer></script>
+    
+    <style>
+        .webHolder {
+            width: 400px;
+            height: 300px;
+            overflow: auto;
+            background-color: var(--bg-darkest);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Horizontal Navigation Styling */
+        .navMenu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .navItem a {
+            display: block;
+            color: #000;
+            padding: 12px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Change the link color on hover */
+        .navItem a:hover {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerHolder">
+        <br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 50</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Sticky Navigation Bar</p><br>
+    
+        <div class="webHolder">
+            <ul class="navMenu">
+                <li class="navItem"><a href="#home">Home</a></li>
+                <li class="navItem"><a href="#news">News</a></li>
+                <li class="navItem"><a href="#contact">Contact</a></li>
+                <li class="navItem"><a href="#about">About</a></li>
+            </ul>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eveniet voluptates, facere aperiam blanditiis fugit dolorem debitis aliquam nam, officiis perferendis, ad iure. Reiciendis odit adipisci, sapiente ut voluptatibus esse!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At quasi totam corporis voluptates, alias tenetur fugiat repellat pariatur deserunt blanditiis maxime non distinctio soluta aut voluptatum, accusantium laboriosam iste sit.  
+            </p><br>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quibusdam dolorum optio similique excepturi maxime quos rerum, pariatur repudiandae perspiciatis dolorem dolore aspernatur error voluptates modi officia quae at eligendi?
+            </p>
+        </div>
+    </div>
+</body>
+<script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".navMenu a");
+    
+        // Check if there's a saved active link in localStorage
+        const savedActiveLink = localStorage.getItem("activeLink");
+        if (savedActiveLink) {
+            links.forEach(link => {
+                if (link.href === savedActiveLink) {
+                    link.style.color = "tomato";
+                }
+            });
+        }
+    
+        links.forEach(link => {
+            link.addEventListener("click", function () {
+                // Reset all links to default color
+                links.forEach(l => l.style.color = "");
+    
+                // Set the clicked link to red
+                this.style.color = "red";
+    
+                // Save the active link in localStorage
+                localStorage.setItem("activeLink", this.href);
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const webHolder = document.querySelector(".webHolder");
+        const navMenu = document.querySelector(".navMenu");
+        
+        // Set navMenu to be positioned relative to webHolder
+        navMenu.style.position = "sticky";
+        navMenu.style.top = "30px";
+        navMenu.style.zIndex = "1000";
+        navMenu.style.background = "#f1f1f1";
+    
+        webHolder.addEventListener("scroll", function () {
+            if (webHolder.scrollTop > 10) {
+                navMenu.style.top = "0";
+            } else {
+                navMenu.style.top = "10px";
+            }
+        });
+    });
+    
+</script>
+</html>

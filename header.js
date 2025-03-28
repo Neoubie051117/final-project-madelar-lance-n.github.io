@@ -78,15 +78,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function highlightActiveLink(navLinks) {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const currentPage = window.location.pathname.split('/').pop();
+    
         navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
+            // Remove active class from all links first
+            link.classList.remove('active');
+    
+            // Check if link href matches the current page
+            if (link.getAttribute('href').endsWith(currentPage)) {
                 link.classList.add('active');
-            } else {
-                link.classList.remove('active');
             }
         });
     }
+    
 
     function addPageTransition(navLinks) {
         navLinks.forEach(link => {

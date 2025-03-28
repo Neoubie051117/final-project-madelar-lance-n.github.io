@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 44 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer's CSS--> 
+    <link rel="stylesheet" href="css-activity.css">    <!---CSS Activity's CSS-->
+    <script src="css.activity.js" defer></script>     <!--CSS Activity's Scripts-->  
+</head>
+
+<style>
+ /* Mobile View */
+ @media (max-width: 768px) {
+    .navMenu {
+        width: 100%;
+        padding: 0;
+    }
+    .navItem a {
+        padding: 12px;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .navMenu {
+        width: 250px;
+    }
+}
+
+/* Vertical Navigation Styling */
+.navMenu {
+    list-style-type: none;
+    margin: 10px auto;
+    padding: 0;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    outline: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navItem {
+    width: 100%;
+}
+
+.navItem a {
+    display: block;
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Change the link color on hover */
+.navItem a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Active Link Styling */
+.navItem a.active {
+    color: tomato;
+}
+</style>
+
+<body>
+    <div class="containerHolder">
+        <br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 44</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Active &amp; Current Navigation Link</p><br>
+    
+        <ul class="navMenu">
+            <li class="navItem"><a href="#home">Home</a></li>
+            <li class="navItem"><a href="#news">News</a></li>
+            <li class="navItem"><a href="#contact">Contact</a></li>
+            <li class="navItem"><a href="#about">About</a></li>
+        </ul>
+    </div>
+</body>
+
+<script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".navMenu a");
+    
+        // Check if there's a saved active link in localStorage
+        const savedActiveLink = localStorage.getItem("activeLink");
+        if (savedActiveLink) {
+            links.forEach(link => {
+                if (link.href === savedActiveLink) {
+                    link.style.color = "tomato";
+                }
+            });
+        }
+    
+        links.forEach(link => {
+            link.addEventListener("click", function () {
+                // Reset all links to default color
+                links.forEach(l => l.style.color = "");
+    
+                // Set the clicked link to red
+                this.style.color = "red";
+    
+                // Save the active link in localStorage
+                localStorage.setItem("activeLink", this.href);
+            });
+        });
+    });
+
+</script>
+
+</html>
