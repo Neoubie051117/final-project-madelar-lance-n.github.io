@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 35 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="css-activity.css">    <!---CSS Activity's CSS-->
+    <script src="css.activity.js" defer></script>     <!--CSS Activity's Scipts-->  
+</head>
+
+<style>
+    .activity-title {
+        color: var(--text-primary);
+    }
+
+    .activity-text {
+        color: var(--text-primary);
+        margin: 0 0 15px;
+        font-size: 28px;
+        text-align: justify;
+    }
+
+    .text-indent {
+        text-indent: 5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .activity-title {
+            font-size: 1.5rem;
+        }
+        .activity-text {
+            font-size: 1rem;
+            margin: 0 0 10px;
+            text-align: justify;
+        }
+        .text-uppercase, .text-lowercase, .text-capitalize, .text-indent {
+            font-size: 1rem;
+        }
+        .text-indent {
+            text-indent: 2rem;
+        }
+    }
+    
+    @media screen and (min-width: 769px) {
+        .activity-title {
+            font-size: 2rem;
+        }
+        .activity-text {
+            font-size: 1.75rem;
+            margin: 0 0 15px;
+            text-align: justify;
+        }
+        .text-uppercase, .text-lowercase, .text-capitalize, .text-indent {
+            font-size: 1.5rem;
+        }
+        .text-indent {
+            text-indent: 5rem;
+        }
+    }
+</style>
+
+<body>
+    <div class="containerHolder">
+        <br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 35</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Text Indentation Property</p>
+        <br>
+
+        <p class="activity-text text-indent">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum amet iure deleniti natus facilis a nesciunt libero obcaecati, recusandae molestiae, delectus sequi suscipit? Minima doloribus nam eum aperiam ipsam suscipit.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla aperiam aliquid dicta ex corporis tempore, nemo facilis a, distinctio dignissimos laborum modi at officia, voluptas magni? Sapiente repellat voluptas perspiciatis!
+        </p>
+    </div>
+</body>
+</html>

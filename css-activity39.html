@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 39 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="css-activity.css">    <!---CSS Activity's CSS-->
+    <script src="css.activity.js" defer></script>     <!--CSS Activity's Scipts-->  
+</head>
+
+<style>
+    .lead{
+        color: var(--accent-primary);
+    }
+
+    .example{
+        margin: 0 0 25px;
+    }
+
+    .word-spacing-wide {
+        word-spacing: 10px;
+    }
+
+    .word-spacing-narrow {
+        word-spacing: -5px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .activity-title {
+            font-size: 1.5rem;
+        }
+        .example {
+            font-size: 1rem;
+            margin: 0 0 10px;
+            text-align: justify;
+        }
+        .word-spacing-wide {
+            word-spacing: 5px;
+        }
+        .word-spacing-narrow {
+            word-spacing: -3px;
+        }
+    }
+    
+    @media screen and (min-width: 769px) {
+        .activity-title {
+            font-size: 2rem;
+        }
+        .example {
+            font-size: 1.75rem;
+            margin: 0 0 15px;
+            text-align: justify;
+        }
+        .word-spacing-wide {
+            word-spacing: 10px;
+        }
+        .word-spacing-narrow {
+            word-spacing: -5px;
+        }
+    }
+</style>
+
+<body>
+    <div class="containerHolder">
+        <br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 39</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Word Spacing Property</p>
+        <br>
+
+        <p class="lead">Word-Spacing Value Of 10px</p>
+        <h1 class="example word-spacing-wide">This is heading 1</h1>
+        <p class="lead">Word-Spacing Value Of 5px</p>
+        <h2 class="example word-spacing-narrow">This is heading 2</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 30 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="css-activity.css">    <!---CSS Activity's CSS-->
+    <script src="css.activity.js" defer></script>     <!--CSS Activity's Scipts-->
+</head>
+
+<style>
+p {
+    color: var(--text-primary);
+    outline-color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    margin: 0 0 15px;
+    padding: 5px 5px 5px;
+}
+
+/* Outline styles */
+.dotted { outline-style: dotted; }
+.dashed { outline-style: dashed; }
+.solid { outline-style: solid; }
+.double { outline-style: double; }
+.groove { outline-style: groove; }
+.ridge { outline-style: ridge; }
+.inset { outline-style: inset; }
+.outset { outline-style: outset; }
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    p {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+</style>
+    
+
+<body>
+    <div class="containerHolder"><br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 30</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Styling Outline Property</p><br>
+        
+        <p class="dotted">A dotted outline</p>
+        <p class="dashed">A dashed outline</p>
+        <p class="solid">A solid outline</p>
+        <p class="double">A double outline</p>
+        <p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+        <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+        <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+        <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+
+    </div>
+</body>
+</html>

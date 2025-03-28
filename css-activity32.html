@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 32 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="css-activity.css">    <!---CSS Activity's CSS-->
+    <script src="css.activity.js" defer></script>     <!--CSS Activity's Scipts-->  
+</head>
+
+<style>
+    .activity-title {
+        color: var(--text-primary);
+    }
+
+    .activity-text {
+        color: var(--accent-primary);
+    }
+
+    .heading-center {
+        text-align: center;
+    }
+
+    .heading-left {
+        text-align: left;
+    }
+
+    .heading-right {
+        text-align: right;
+    }
+
+    @media screen and (max-width: 768px) {
+        .activity-title {
+            font-size: 1.5rem;
+        }
+        .activity-text {
+            font-size: 1rem;
+        }
+        .heading-center, .heading-left, .heading-right {
+            font-size: 1.2rem;
+        }
+        .content-description {
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media screen and (min-width: 769px) {
+        .activity-title {
+            font-size: 2rem;
+        }
+        .activity-text {
+            font-size: 1.2rem;
+        }
+        .heading-center, .heading-left, .heading-right {
+            font-size: 1.5rem;
+        }
+        .content-description {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<body>
+    <div class="containerHolder">
+        <br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 32</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+
+        <p class="contentHeader">Text Alignments Style</p>
+        <br>
+
+        <h1 class="activity-title heading-center">This Is Heading 1 (center)</h1><br>
+        <h2 class="heading-left">Heading 2 (left)</h2><br>
+        <h3 class="heading-right">Heading 3 (right)</h3><br>
+
+        <p class="activity-text">This is an ordinary paragraph. Notice that this text is red. The default text color for a page is defined in the body selector.</p><br>
+
+        <p class="content-description">The three headings above are aligned center, left, and right.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 38 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="css-activity.css">    <!---CSS Activity's CSS-->
+    <script src="css.activity.js" defer></script>     <!--CSS Activity's Scipts-->  
+</head>
+
+<style>
+    .lead{
+        color: var(--accent-primary);
+    }
+
+    .paragraph{
+        font-size: 24px;
+        margin: 0 0 25px;
+    }
+
+    .text-direction-rtl {
+        direction: rtl;
+    }
+    
+    @media screen and (min-width: 769px) {
+        .text-direction-rtl {
+            direction: rtl;
+            text-align: right;
+        }
+    }
+</style>
+
+<body>
+    <div class="containerHolder">
+        <br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 38</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Text Direction Property</p>
+        <br>
+
+        <p class="lead">Default Text Direction.</p>
+        <p class="paragraph ">Default Text Direction.</p>
+        <p class="lead">Right-To-Left Text Direction.</p>
+        <p class="paragraph text-direction-rtl"><bdo dir="rtl">Right-To-Left Text Direction.</bdo></p>
+    </div>
+</body>
+</html>

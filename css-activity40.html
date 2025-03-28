@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Activity 40 By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="css-activity.css">    <!---CSS Activity's CSS-->
+    <script src="css.activity.js" defer></script>     <!--CSS Activity's Scipts-->  
+</head>
+
+<style>
+    .text-shadow-effect {
+        text-shadow: 3px 2px var(--accent-primary);
+    }
+
+    @media screen and (max-width: 768px) {
+        .text-shadow-effect {
+            text-shadow: 2px 1px var(--accent-primary);
+        }
+    }
+    
+    @media screen and (min-width: 769px) {
+        .text-shadow-effect {
+            text-shadow: 3px 2px var(--accent-primary);
+        }
+    }
+</style>
+
+<body>
+    <div class="containerHolder">
+        <br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 40</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Text Shadow Property</p>
+        <br>
+
+        <h1 class="text-shadow-effect">Text-shadow effect</h1>
+        <p><b>Note:</b> Internet Explorer 9 and earlier do not support the text-shadow property.</p>
+    </div>
+</body>
+</html>
