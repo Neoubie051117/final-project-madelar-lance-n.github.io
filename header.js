@@ -78,18 +78,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function highlightActiveLink(navLinks) {
-        const currentPage = window.location.pathname.split('/').pop();
+    let currentPage = window.location.pathname.split('/').pop();
     
-        navLinks.forEach(link => {
-            // Remove active class from all links first
-            link.classList.remove('active');
-    
-            // Check if link href matches the current page
-            if (link.getAttribute('href').endsWith(currentPage)) {
-                link.classList.add('active');
-            }
-        });
+    // If accessing the root, set it to 'index.html' manually
+    if (currentPage === '' || currentPage === '/') {
+        currentPage = 'index.html';
     }
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+
+        if (link.getAttribute('href').endsWith(currentPage)) {
+            link.classList.add('active');
+        }
+    });
+}
+
     
 
     function addPageTransition(navLinks) {

@@ -253,7 +253,9 @@ tr:hover {
   }
 }
 
-
-.nav-link.active {
+#activities-desktop-highlight,
+#activities-mobile-highlight {
   color: var(--accent-primary);
 }
+
+
