@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Activity 9 By Lance N. Madelar</title>
+    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="header.css">  
+    <script src="footer.js" defer></script>  
+    <link rel="stylesheet" href="footer.css">   
+    <link rel="stylesheet" href="javascript-activity.css">   
+    <script src="javascript-activity.js" defer></script> 
+    <style>
+        .title {
+            color: #ffffff;
+        }
+
+        .navContainer {
+            background-color: var(--bg-dark); 
+            width:100%; 
+            border-radius: 10px;
+        }
+
+        .scriptContainer {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background: var(--bg-darkest);
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .buttons {
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .buttons:hover {
+            background: tomato;
+            color: #fff;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            transition: 0.2s;
+        }
+        input[type="text"].invalid {
+            border-color: red;
+            background-color: #ffe6e6;
+            animation: shake 0.3s ease-in-out;
+        }
+        input[type="text"].valid {
+            border-color: green;
+            background-color: #e6ffe6;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+        .message {
+            margin-top: 5px;
+            font-size: 14px;
+            color: white;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerHolder"><br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 9</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Validating User Input</p><br>
+        <div class="scriptContainer">
+            <input type="text" id="userInput" placeholder="Enter something">
+            <p id="demonstration-paragraph"><br>This is a demonstration of validating input</p>
+            <button class="buttons" onclick="validateInput()">Click to validate input</button><br>
+            <p id="validationMessage" class="message"></p>
+        </div>
+    </div>
+</body>
+
+<script>
+    function validateInput() {
+        let inputField = document.getElementById("userInput");
+        let input = inputField.value.trim();
+        let message = document.getElementById("validationMessage");
+
+        if (input === "") {
+            message.innerText = "Input cannot be empty!";
+            message.style.color = "tomato";
+            inputField.classList.add("invalid");
+            inputField.classList.remove("valid");
+        } else if (!isNaN(input)) {
+            message.innerText = "Valid number input!";
+            message.style.color = "white";
+            inputField.classList.add("valid");
+            inputField.classList.remove("invalid");
+        } else {
+            message.innerText = "Invalid input! Please enter a number.";
+            message.style.color = "tomato";
+            inputField.classList.add("invalid");
+            inputField.classList.remove("valid");
+        }
+    }
+</script>
+</html>

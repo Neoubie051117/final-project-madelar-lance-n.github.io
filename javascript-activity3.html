@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Activity 3 By Lance N. Madelar</title>
+    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="header.css">  
+    <script src="footer.js" defer></script>  
+    <link rel="stylesheet" href="footer.css">   
+    <link rel="stylesheet" href="javascript-activity.css">   
+    <script src="javascript-activity.js" defer></script> 
+</head>
+
+<style>
+    .scriptContainer {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background: var(--bg-darkest);
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        color: white;
+    }
+    .buttons {
+        background: #fff;
+        color: #000;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .buttons:hover {
+        background: tomato;
+        color: #fff;
+    }
+
+    /* Responsive Media Queries */
+@media (max-width: 768px) {
+    .scriptContainer {
+        padding: 15px;
+        max-width: 90%;
+    }
+    
+    .buttons {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    }
+    
+    @media (max-width: 480px) {
+    
+    .scriptContainer {
+        padding: 12px;
+    }
+    
+    .buttons {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    }
+</style>
+
+<body>
+    <div class="containerHolder"><br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 3</h1>
+            <button class="navButton">&gt;</button>
+        </div>
+
+        <p class="contentHeader">Changing CSS Styles Dynamically</p><br>
+        <div class="scriptContainer">
+            <p id="textStyle">This is a demonstration to show script text color style manipulation</p>
+            <button class="buttons" onclick="document.getElementById('textStyle').style.color = 'red'">Click button to change text color</button>
+        </div>
+    </div>
+</body>
+</html>
