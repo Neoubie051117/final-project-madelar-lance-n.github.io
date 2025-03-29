@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Activity 2     By Lance N. Madelar</title>
+    
+    <script src="header.js" defer></script>      <!---Header's Load File Script Inclusion-->
+    <link rel="stylesheet" href="header.css">   <!---Header's CSS--> 
+    <script src="footer.js" defer></script>      <!---Footer's Load File Script Inclusion-->
+    <link rel="stylesheet" href="footer.css">   <!---Footer 's CSS--> 
+    <link rel="stylesheet" href="javascript-activity.css">    <!---CSS Activity's CSS-->
+    <script src="javascript-activity.js" defer></script>     <!--CSS Activity's Scipts-->
+</head>
+
+<style>
+#demo{
+font-size: 24px;
+}
+
+/* Script Container */
+.scriptContainer {
+display: grid;
+align-items: center;
+justify-items: center;
+background: var(--bg-darkest);
+padding: 20px;
+border-radius: 8px;
+width: 100%;
+max-width: 600px;
+text-align: center;
+color: white;
+}
+
+/* Buttons */
+.buttons {
+background: #fff;
+color: #000;
+border: none;
+padding: 12px 20px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+margin-top: 20px;
+}
+
+.buttons:hover {
+background: tomato;
+color: #fff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+.scriptContainer {
+    padding: 15px;
+    max-width: 90%;
+}
+
+.buttons {
+    font-size: 16px;
+    padding: 10px 15px;
+}
+}
+
+@media (max-width: 480px) {
+
+.scriptContainer {
+    padding: 12px;
+}
+
+.buttons {
+    font-size: 14px;
+    padding: 8px 12px;
+}
+}
+</style>
+    
+
+<body>
+    <div class="containerHolder"><br>
+        <div class="navContainer">
+            <button class="navButton">&lt;</button>
+            <h1 class="titleHeader">Activity 2  </h1>
+            <button class="navButton">&gt;</button>
+        </div>
+        
+        <p class="contentHeader">Using Window.Alert( ) </p><br>
+        <div class="scriptContainer">
+            <p id="demo">This is a demonstration of using Window.Alert() Notification.</p>
+            <button class="buttons" onclick="showNotification()">Click button to show notification</button>
+        </div>
+    
+    </div>
+</body>
+
+<script defer>
+    function showNotification() {
+        alert("Hello World!");
+    }
+    </script>
+</html>
