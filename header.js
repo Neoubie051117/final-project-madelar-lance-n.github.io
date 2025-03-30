@@ -146,3 +146,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+function addFavicon() {
+    // Check if a favicon already exists
+    let existingFavicon = document.querySelector("link[rel='icon']");
+    
+    if (!existingFavicon) {
+        let favicon = document.createElement("link");
+        favicon.rel = "icon";
+        favicon.type = "image/png";
+        favicon.href = "./assets/Logo.png";
+        favicon.loading = "lazy";
+        document.head.appendChild(favicon);
+    }
+}
+
+// Run the function when the DOM is loaded
+document.addEventListener("DOMContentLoaded", addFavicon);
+

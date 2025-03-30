@@ -1,0 +1,194 @@
+/* Default styles for larger screens (desktops) */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    gap: 10px; /* Reduce the gap between elements */
+}
+
+.pageTitleHeader {
+    font-size: 32px;
+    text-align: center;
+    color: var(--accent-primary);
+    margin: 60px 0 20px;
+    font-weight: 600;
+}
+
+.calendarHolder {
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 0 0 50px;
+}
+
+th {
+    padding: 15px 32px;
+    font-size: 18px;
+    text-align: center;
+    word-wrap: break-word;
+    color: black;
+}
+
+.birthdateMark {
+    background-color: tomato;
+    border-radius: 15px;
+    color: white;
+}
+
+.monthHeader {
+    font-size: 24px;
+    padding: 20px 0;
+    text-align: center;
+    color: black;
+}
+
+.dayOfWeek th {
+    font-weight: 600;
+    color: black;
+}
+
+body {
+    background-image: url("./assets/Showcase3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive styles for large tablets */
+@media (max-width: 1200px) {
+    .calendarHolder {
+        width: max-content;
+        padding: 15px;
+    }
+    th {
+        font-size: 16px;
+    }
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+    .content {
+        height: auto;
+    }
+    .calendarHolder {
+        width: max-content;
+        overflow-x: auto;
+        padding: 10px;
+    }
+    
+    th {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .monthHeader {
+        font-size: 18px;
+    }
+}
+
+/* Responsive styles for small tablets */
+@media (max-width: 768px) {
+    .content {
+        padding: 15px;
+    }
+    .calendarHolder {
+        flex-direction: column;
+        width: max-content;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    
+    th {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .monthHeader {
+        font-size: 16px;
+    }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    .content {
+        padding: 20px;
+        gap: 5px;
+    }
+    
+    .calendarHolder {
+        flex-direction: column;
+        width: max-content; 
+        padding: 5px;
+        border-radius: 10px;
+    }
+    
+    th {
+        padding: 4px;
+        font-size: 12px;
+    }
+    
+    .monthHeader {
+        font-size: 14px;
+    }
+    
+    .pageTitleHeader {
+        font-size: 20px;
+    }
+}
+
+/* Responsive styles for very small devices (500px and below) */
+@media (max-width: 500px) {
+    .content {
+        padding: 15px;
+        gap: 3px;
+    }
+    
+    .calendarHolder {
+        flex-direction: column;
+        width: 100%;
+        padding: 3px;
+        border-radius: 8px;
+    }
+    
+    th {
+        padding: 3px;
+        font-size: 10px;
+    }
+    
+    .monthHeader {
+        font-size: 12px;
+    }
+    
+    .pageTitleHeader {
+        font-size: 18px;
+    }
+}
+
+/* Extra small devices (400px and below) */
+@media (max-width: 400px) {
+    .content {
+        padding: 10px;
+    }
+    
+    .calendarHolder {
+        padding: 2px;
+        border-radius: 5px;
+    }
+    
+    th {
+        padding: 2px;
+        font-size: 9px;
+    }
+    
+    .monthHeader {
+        font-size: 10px;
+    }
+    
+    .pageTitleHeader {
+        font-size: 16px;
+    }
+}
