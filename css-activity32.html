@@ -14,16 +14,15 @@
 </head>
 
 <style>
-    .activity-title {
-        color: var(--text-primary);
-    }
-
-    .activity-text {
+    .content-description {
         color: var(--accent-primary);
+        font-size: 24px;
+        text-align: center;
     }
 
     .heading-center {
         text-align: center;
+
     }
 
     .heading-left {
@@ -35,38 +34,21 @@
     }
 
     @media screen and (max-width: 768px) {
-        .activity-title {
-            font-size: 1.5rem;
-        }
-        .activity-text {
-            font-size: 1rem;
-        }
         .heading-center, .heading-left, .heading-right {
             font-size: 1.2rem;
-        }
-        .content-description {
-            font-size: 0.9rem;
         }
     }
     
     @media screen and (min-width: 769px) {
-        .activity-title {
-            font-size: 2rem;
-        }
-        .activity-text {
-            font-size: 1.2rem;
-        }
+
         .heading-center, .heading-left, .heading-right {
             font-size: 1.5rem;
-        }
-        .content-description {
-            font-size: 1rem;
         }
     }
 </style>
 
 <body>
-    <div class="containerHolder">
+    <div class="containerHolder" style=" display:block;">
         <br>
         <div class="navContainer">
             <button class="navButton">&lt;</button>
@@ -77,12 +59,10 @@
         <p class="contentHeader">Text Alignments Style</p>
         <br>
 
-        <h1 class="activity-title heading-center">This Is Heading 1 (center)</h1><br>
-        <h2 class="heading-left">Heading 2 (left)</h2><br>
-        <h3 class="heading-right">Heading 3 (right)</h3><br>
-
-        <p class="activity-text">This is an ordinary paragraph. Notice that this text is red. The default text color for a page is defined in the body selector.</p><br>
-
+        <h1 class="heading-center">This statement is in Center</h1><br>
+        <h2 class="heading-left">This statement is in Left</h2><br>
+        <h3 class="heading-right">This statement is in Right</h3><br>
+        <br>
         <p class="content-description">The three headings above are aligned center, left, and right.</p>
     </div>
 </body>

@@ -14,76 +14,20 @@
 </head>
 
 <style>
-    .activity-title {
-        color: var(--text-primary);
+    .Text-Decorated-Element{
+        font-size: 32px;
+    }
+
+    .Type-A {
         text-decoration: overline;
     }
 
-    .activity-text {
-        color: var(--text-primary);
-        margin: 15px 0 15px;
-    }
-
-    .heading-center {
-        text-align: center;
-    }
-
-    .heading-left {
-        text-align: left;
+    .Type-B {
         text-decoration: line-through;
     }
 
-    .heading-right {
-        text-align: right;
+    .Type-C {
         text-decoration: underline;
-    }
-
-    @media screen and (max-width: 768px) {
-        .activity-title {
-            font-size: 1.5rem;
-            text-decoration: overline;
-        }
-        .activity-text {
-            font-size: 1rem;
-            margin: 0 0 10px;
-            text-align: justify;
-        }
-        .heading-center, .heading-left, .heading-right {
-            font-size: 1.2rem;
-        }
-        .heading-left {
-            text-decoration: line-through;
-        }
-        .heading-right {
-            text-decoration: underline;
-        }
-        .content-description {
-            font-size: 0.9rem;
-        }
-    }
-    
-    @media screen and (min-width: 769px) {
-        .activity-title {
-            font-size: 2rem;
-            text-decoration: overline;
-        }
-        .activity-text {
-            font-size: 1.75rem;
-            margin: 0 0 15px;
-            text-align: justify;
-        }
-        .heading-center, .heading-left, .heading-right {
-            font-size: 1.5rem;
-        }
-        .heading-left {
-            text-decoration: line-through;
-        }
-        .heading-right {
-            text-decoration: underline;
-        }
-        .content-description {
-            font-size: 1rem;
-        }
     }
 </style>
 
@@ -99,13 +43,10 @@
         <p class="contentHeader">Text Decoration Style</p>
         <br>
 
-        <h1 class="activity-title heading-center">This Is Heading 1 (center)</h1><br>
-        <h2 class="heading-left">Heading 2 (left)</h2><br>
-        <h3 class="heading-right">Heading 3 (right)</h3><br>
+        <p class="Text-Decorated-Element Type-A">Overline</p><br>
+        <p class="Text-Decorated-Element Type-B">Line-Through</p><br>
+        <p class="Text-Decorated-Element Type-C">Underline</p><br>
 
-        <p class="activity-text">This is an ordinary paragraph. Notice that this text is red. The default text color for a page is defined in the body selector.</p><br>
-
-        <p class="content-description">The three headings above are aligned center, left, and right, with different text decorations applied.</p><br>
     </div>
 </body>
 </html>
