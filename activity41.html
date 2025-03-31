@@ -126,22 +126,21 @@
         display: none;
     }
     
-    .file-upload-label {
+    .file-upload-button {
         display: inline-block;
-        background: #007bff;
+        background: var(--bg-dark);
         color: white;
         padding: 12px 24px;
-        border-radius: 8px;
+        border-radius: 5px;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 16px;
         transition: background 0.3s ease, transform 0.2s;
-        background-image: linear-gradient(to right, #007bff, #0056b3);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: none;
     }
-    
-    .file-upload-label:hover {
-        background: #0056b3;
-        transform: scale(1.05);
+
+    .file-upload-button:hover {
+        background: #303030;
     }
     
     /* Responsive Design */
@@ -190,7 +189,8 @@
                     <div class="preview-box" id="preview-box">
                         <p>Image Preview</p>
                     </div>
-                    <label for="fileupload">Select a file to upload:</label>
+                    <button id="file-upload-button" class="file-upload-button">Select a file to upload</button>
+<input type="file" id="fileupload" name="fileupload" accept="image/*" required onchange="previewImage(event)" style="display: none;" />
                     <input type="file" id="fileupload" name="fileupload" accept="image/*" required onchange="previewImage(event)" />
 
                     <div class="button-group">
@@ -204,6 +204,10 @@
     </div>
 
     <script>
+        document.getElementById("file-upload-button").addEventListener("click", function() {
+            document.getElementById("fileupload").click();
+        });
+
         function previewImage(event) {
             const previewBox = document.getElementById("preview-box");
             const file = event.target.files[0];
